@@ -68,7 +68,7 @@ client.connect((err) => {
         });
     });
 
-    app.get("/booking/:id", (req, res) => {
+    app.get("/service/:id", (req, res) => {
         const id = ObjectId(req.params.id);
         visaCollection.find({ _id: id }).toArray((err, documents) => {
             res.send(documents);

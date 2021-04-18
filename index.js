@@ -14,6 +14,7 @@ const client = new MongoClient(uri, {
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
 
 client.connect((err) => {
     const visaCollection = client.db(process.env.DB_NAME).collection("visas");

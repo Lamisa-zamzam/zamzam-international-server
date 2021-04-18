@@ -81,7 +81,7 @@ client.connect((err) => {
         visaCollection
             .find({ serviceName: serviceName })
             .toArray((err, documents) => {
-               res.send(documents);
+                res.send(documents);
             });
     });
 

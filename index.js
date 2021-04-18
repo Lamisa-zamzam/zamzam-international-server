@@ -14,7 +14,6 @@ const client = new MongoClient(uri, {
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.json());
 
 client.connect((err) => {
     const visaCollection = client.db(process.env.DB_NAME).collection("visas");
@@ -127,7 +126,8 @@ client.connect((err) => {
         const _id = ObjectId(req.params._id);
         console.log(_id);
         visaCollection.deleteOne({ _id: _id }).then((result) => {
-            res.send(result.insertedCount > 0);
+            console.log(result.deletedCount);
+            res.send(result.deletedCount > 0);
         });
     });
 });
@@ -136,6 +136,6 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });

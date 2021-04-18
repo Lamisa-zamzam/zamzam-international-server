@@ -76,12 +76,12 @@ client.connect((err) => {
         });
     });
 
-    app.get("/service/:serviceName", (req, res) => {
-        const serviceName = req.params.serviceName;
+    app.get("/service", (req, res) => {
+        const serviceName = req.query.serviceName;
         visaCollection
             .find({ serviceName: serviceName })
             .toArray((err, documents) => {
-                res.send(documents);
+               res.send(documents);
             });
     });
 

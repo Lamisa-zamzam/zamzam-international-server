@@ -4,6 +4,10 @@ Welcome to my server!!! Here you can request a number of data which is basically
 
 ## [Visit My Root API](https://morning-shelf-52119.herokuapp.com/)
 
+## My client side code: [https://github.com/Lamisa-zamzam/zamzam-international](https://github.com/Lamisa-zamzam/zamzam-international)
+
+## My live site: [https://complete-website-3.web.app/](https://complete-website-3.web.app/)
+
 Secondly, if you call [The Services API](https://morning-shelf-52119.herokuapp.com/services), you will get the data of several visa to be ordered by the customers in an array. The array contains an object for each visa and each object contains some properties, namely: \_id, id, serviceName(title of the service, e.g. visa), price, detail and image(URL to the picture of the visa). Though they are not real ones, however, that could work great as placeholders.
 
 You can get all the reviews that people gave to the visa agency form [The Reviews API](https://morning-shelf-52119.herokuapp.com/reviews). Every review object has properties like \_id, name(name of the user), profession, feedback, imgURL(image of the user).
@@ -20,3 +24,10 @@ My project includes:
 4.  [Cross Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) ,
 5.  [Environment Variables](https://www.npmjs.com/package/dotenv) and
 6.  [Heroku Deployment](https://devcenter.heroku.com/categories/reference).
+
+
+### Roadmap
+=> considring adding mongoose
+
+### Contributing
+Pull requsts are welcome. For major changes, please open a issue first and discuss what you would like to change. 
